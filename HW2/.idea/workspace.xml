@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d36b102d-185e-40c1-b713-d3b75bf6029e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/HW2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/HW2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/out/production/HW2/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/out/production/HW2/SchoolMagazine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/out/production/HW2/SchoolMagazine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/out/production/HW2/SchoolMagazine.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/out/production/HW2/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/out/production/HW2/Students.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/out/production/HW2/Students.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Group.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SchoolMagazine.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SchoolMagazine.txt" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Hb26rwEzIkex3q2EfnE1vA2sZp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Project.color": "000a01",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/KPO/HW2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d36b102d-185e-40c1-b713-d3b75bf6029e" name="Changes" comment="" />
+      <created>1668539290241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668539290241</updated>
+      <workItem from="1668539291532" duration="3075000" />
+      <workItem from="1668606242414" duration="8000" />
+      <workItem from="1668669816309" duration="1644000" />
+      <workItem from="1668672304747" duration="1224000" />
+      <workItem from="1668704600588" duration="245000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Group.java</url>
+          <line>75</line>
+          <properties class="Group" method="randomStudent">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

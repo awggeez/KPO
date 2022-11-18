@@ -37,6 +37,7 @@ public class Group {
                     System.out.println("""
                             1. /r - выбор случайного студента
                             2. /l - список студентов с оценками
+                            3. /end - завершить пару
                             """);
                     break;
                 case "/end":

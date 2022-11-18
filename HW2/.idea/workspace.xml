@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d36b102d-185e-40c1-b713-d3b75bf6029e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2/SchoolMagazine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2/SchoolMagazine.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW2/Students.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW2/Students.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SchoolMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SchoolMagazine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SchoolMagazine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SchoolMagazine.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +27,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Project.color": "000a01",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/KPO/Git_HW/HW2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;000a01&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/KPO/Git_HW/HW2&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,7 +50,8 @@
       <workItem from="1668672304747" duration="1224000" />
       <workItem from="1668704600588" duration="245000" />
       <workItem from="1668769936743" duration="49000" />
-      <workItem from="1668772465246" duration="127000" />
+      <workItem from="1668772465246" duration="517000" />
+      <workItem from="1668773025315" duration="91000" />
     </task>
     <servers />
   </component>
@@ -79,7 +74,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Group.java</url>
-          <line>75</line>
+          <line>76</line>
           <properties class="Group" method="randomStudent">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

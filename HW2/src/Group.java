@@ -59,7 +59,7 @@ public class Group {
             List<Student> students = SchoolMagazine.getStudents();
             for (Student student : students) {
                 System.out.print(student + " ");
-                if (student.getGrade() == -1) {
+                if (!student.isPresence()) {
                     System.out.println("-");
                     writer.write(student.getFirstName() + " " + student.getLastName() + " | - | Присутствие на паре: " +
                                  student.isPresence() + "\n\n");

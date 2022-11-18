@@ -36,7 +36,6 @@ public class SchoolMagazine {
             while (bufferedReader.ready()) {
                 firstAndLastName = bufferedReader.readLine();
                 String[] names = firstAndLastName.split(" ");
-
                 Student student = new Student();
                 student.setFirstName(names[1]);
                 student.setLastName(names[0]);

@@ -58,7 +58,7 @@ public class Group {
             List<Student> students = SchoolMagazine.getStudents();
             for (Student student : students) {
                 System.out.print(student + " ");
-                if (student.getGrade() == 0) {
+                if (student.getGrade() == -1) {
                     System.out.println("-");
                     writer.write(student.getFirstName() + " " + student.getLastName() + " | - | Присутствие на паре: " +
                                  student.isPresence() + "\n\n");
@@ -77,6 +77,7 @@ public class Group {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int index = random.nextInt(SchoolMagazine.getSize());
+        int grade = 0;
         Student student = students.get(index);
         if (student.hasGrade()) {
             System.out.println("Данный студент уже был выбран. Выберите другого");
@@ -93,7 +94,25 @@ public class Group {
                         System.out.println();
                         student.setPresence(true);
                         student.setHasGrade(true);
-                        student.setGrade(1 + random.nextInt(10));
+                        System.out.print("Оценка(от 0 до 10): ");
+                        boolean isNumber = false;
+                        while (!isNumber) {
+                            try {
+                                grade = scanner.nextInt();
+                                while (grade < 0 || grade > 10) {
+                                    System.out.print("""
+                                            Оценка должна быть в диапазоне от 0 до 10
+                                            Оценка(от 0 до 10): 
+                                            """);
+                                    grade = scanner.nextInt();
+                                }
+                                isNumber = true;
+                            } catch (Exception ex) {
+                                System.out.println("Необходимо ввести число");
+                                scanner.nextLine();
+                            }
+                        }
+                        student.setGrade(grade);
                         System.out.println("> Оценка за ответ: " + student.getGrade() + "\n");
                         isCorrectAnswer = true;
                         break;

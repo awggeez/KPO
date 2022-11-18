@@ -2,7 +2,7 @@ public class Student {
 
     private String firstName;
     private String lastName;
-    private int grade;
+    private int grade = -1;
     private boolean isPresence;
     private boolean hasGrade;
 

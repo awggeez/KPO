@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36b102d-185e-40c1-b713-d3b75bf6029e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../HW3/src/FileIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW3/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW3/src/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HW1/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SchoolMagazine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SchoolMagazine.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,8 @@
       <workItem from="1668704600588" duration="245000" />
       <workItem from="1668769936743" duration="49000" />
       <workItem from="1668772465246" duration="517000" />
-      <workItem from="1668773025315" duration="724000" />
+      <workItem from="1668773025315" duration="2731000" />
+      <workItem from="1670006277831" duration="706000" />
     </task>
     <servers />
   </component>
@@ -75,7 +79,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Group.java</url>
-          <line>76</line>
+          <line>77</line>
           <properties class="Group" method="randomStudent">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

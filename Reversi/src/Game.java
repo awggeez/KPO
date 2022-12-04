@@ -2,6 +2,9 @@ import java.util.*;
 
 import static constants.FinalConsoleCommands.*;
 
+/**
+ * @author Abiev Marik Olegovich
+ */
 public class Game {
     static final Board board = new Board();
     private static Player player1;
@@ -58,6 +61,9 @@ public class Game {
     }
 
 
+    /**
+     * Responsible for the first player's turn
+     */
     private static void stepByFirstPlayer() {
         if (isAnyChoice(PLAYER_1_SYMBOL)) {
             stepByPlayer(PLAYER_1_STEP, PLAYER_1_SYMBOL, player1);
@@ -67,6 +73,9 @@ public class Game {
         }
     }
 
+    /**
+     * Responsible for the second player's turn
+     */
     private static void stepBySecondPlayer() {
         if (isAnyChoice(PLAYER_2_SYMBOL)) {
             stepByPlayer(PLAYER_2_STEP, PLAYER_2_SYMBOL, player2);
@@ -76,6 +85,15 @@ public class Game {
         }
     }
 
+    /**
+     * Performs a human move by calling the <b>step</b> method
+     * and a computer move using the <b>professionalComputerStep</b> and <b>smartStep</b> methods
+     * for a "weak" and "professional" computer, respectively
+     *
+     * @param playerStep    the message that is displayed before the player's turn
+     * @param playerSymbol  the character the player moves with
+     * @param player        player whose turn it is
+     */
     private static void stepByPlayer(String playerStep, char playerSymbol, Player player) {
         boolean isComputer = true, isPerson = false;
         Integer[] pair = new Integer[2];
@@ -96,15 +114,14 @@ public class Game {
                 board.displayBoard();
 
                 if (player.getName().equals(SMART_COMPUTER_NAME)) {
-                    pair = professionalComputer(playerSymbol);
+                    pair = professionalComputerStep(playerSymbol);
                 } else if (player.getName().equals(STUPID_COMPUTER_NAME)) {
-                    pair = smartStep(playerSymbol);
+                    pair = weakComputerStep(playerSymbol);
                 }
             }
             int x = pair[0];
             int y = pair[1];
             if (Checker.checkValidation(x - 1, y - 1, playerSymbol, player)) {
-                player.getSteps().add(pair);
                 Cell cell = new Cell(playerSymbol, false);
                 var reversiBoard = board.getReversiBoard();
                 reversiBoard[y - 1][x - 1] = cell;
@@ -120,6 +137,9 @@ public class Game {
         }
     }
 
+    /**
+     * Removing from the board hints to a person of cells that he may go
+     */
     private static void deleteHints() {
         Cell cell;
         for (int x = 1; x <= SIZE; x++) {
@@ -132,6 +152,11 @@ public class Game {
         }
     }
 
+    /**
+     * Conclusion on the board of hints to a person of cells that he may go
+     *
+     * @param pairs map with coordinates of the cell and the value which you can get if you go there
+     */
     private static void showHints(Map<Integer[], Double> pairs) {
         for (Map.Entry<Integer[], Double> entry : pairs.entrySet()) {
             int x = entry.getKey()[0];
@@ -144,6 +169,11 @@ public class Game {
         board.displayBoard();
     }
 
+    /**
+     * Printing all possible moves on the board
+     *
+     * @param pairs map with coordinates of the cell and the value which you can get if you go there
+     */
     private static void printAllPossibleSteps(Map<Integer[], Double> pairs) {
         System.out.print(OUTPUT_POSSIBLE_COORDINATES);
         boolean isFirstIteration = true;
@@ -160,6 +190,12 @@ public class Game {
         System.out.println();
     }
 
+    /**
+     * Calculation of the most profitable move, based on the points you can get
+     *
+     * @param map map with coordinates of the cell and the value which you can get if you go there
+     * @return    coordinates of the most advantageous cell
+     */
     private static Integer[] calculateFormula(Map<Integer[], Double> map) {
         double mostSignificant = 0;
         Integer[] result = new Integer[2];
@@ -172,10 +208,22 @@ public class Game {
         return result;
     }
 
-    private static Integer[] smartStep(char symbol) {
+    /**
+     * Step by "weak" computer by calling the method <b>calculateFormula</b>
+     *
+     * @param symbol the character the player moves with
+     * @return       coordinates of the most advantageous cell
+     */
+    private static Integer[] weakComputerStep(char symbol) {
         return calculateFormula(mapOfSteps(symbol));
     }
 
+    /**
+     * Returns all possible moves
+     *
+     * @param symbol the character the player moves with
+     * @return       map of the all possible cells to move with the values that can be obtained
+     */
     private static Map<Integer[], Double> mapOfSteps(char symbol) {
         double countZam;
         Map<Integer[], Double> pairs = new HashMap<>();
@@ -190,7 +238,13 @@ public class Game {
         return pairs;
     }
 
-    private static Integer[] professionalComputer(char symbol) {
+    /**
+     * Responsible for the course of a "smart" computer
+     *
+     * @param symbol the character the player moves with
+     * @return       coordinates of the most advantageous cell
+     */
+    private static Integer[] professionalComputerStep(char symbol) {
         var pairs = getPossibleSteps(symbol);
         double maxResult = Integer.MIN_VALUE;
         Integer[] coordinatesForMaxResult = new Integer[2];
@@ -219,15 +273,33 @@ public class Game {
         return coordinatesForMaxResult;
     }
 
+    /**
+     * Returns all possible moves
+     *
+     * @param symbol the character the player moves with
+     * @return       map of the all possible cells to move with the values that can be obtained
+     */
     private static Map<Integer[], Double> getPossibleSteps(char symbol) {
         return mapOfSteps(symbol);
     }
 
+    /**
+     * Determines the most advantageous cell for a move
+     *
+     * @param newSymbol the character the player doesn't move with
+     * @return          the coordinates of the cell with the highest value
+     */
     private static Map<Integer[], Double> superSmartStep(char newSymbol) {
         Map<Integer[], Double> possibleSteps = getPossibleSteps(newSymbol);
         return calculateSuperFormula(possibleSteps);
     }
 
+    /**
+     * Calculates the most advantageous cell for a move using a special formula
+     *
+     * @param map map of the all possible cells to move with the values that can be obtained
+     * @return    the coordinates of the cell with the highest value
+     */
     private static Map<Integer[], Double> calculateSuperFormula(Map<Integer[], Double> map) {
         double mostSignificant = Double.MIN_VALUE;
         Integer[] coordinates = new Integer[2];
@@ -242,6 +314,13 @@ public class Game {
         return result;
     }
 
+    /**
+     * Responsible for the course of a person
+     *
+     * @param player player whose turn it is
+     * @param symbol the character the player moves with
+     * @return       coordinates of the most advantageous cell
+     */
     private static Integer[] step(Player player, char symbol) {
         int x, y;
         String line = "";
@@ -274,6 +353,13 @@ public class Game {
         return pair;
     }
 
+    /**
+     * Fills in the required cells with a <b>symbol</b>
+     *
+     * @param x      coordinate x
+     * @param y      coordinate y
+     * @param symbol the character the player moves with
+     */
     private static void fillOtherCells(int x, int y, char symbol) {
         for (int dx = -1; dx <= 1; dx++) {
             for (int dy = -1; dy <= 1; dy++) {
@@ -284,6 +370,13 @@ public class Game {
             }
         }
     }
+
+    /**
+     * Checks the possibility of a move
+     *
+     * @param symbol the character the player moves with
+     * @return       is possible step or not
+     */
     private static boolean isAnyChoice(char symbol) {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -295,7 +388,9 @@ public class Game {
         return false;
     }
 
-
+    /**
+     * Game mode selection
+     */
     private static void playMode() {
         int modeChoice;
         boolean correctAnswer = false;
@@ -340,6 +435,9 @@ public class Game {
         SCANNER.nextLine();
     }
 
+    /**
+     * Withdrawal of player points
+     */
     public static void getInfo() {
         player1.setScore(board.getCountOfCurrentSymbol('X'));
         player2.setScore(board.getCountOfCurrentSymbol('0'));
@@ -347,10 +445,18 @@ public class Game {
         System.out.println("Player 2: score - " + player2.getScore());
     }
 
+    /**
+     * Return max points of a person
+     *
+     * @return max points of a person
+     */
     public static int getMaxPoints() {
         return maxPoints;
     }
 
+    /**
+     * Allows the player to repeat the move
+     */
     public static void stepBack() {
         var cells = board.getBoard();
         if (cells.size() < 2) {
@@ -366,6 +472,11 @@ public class Game {
         cells.remove(cells.size() - 1);
     }
 
+    /**
+     *  Returns the previous state of the board for the player
+     *
+     * @param cells list of all board states
+     */
     private static void backBoard(List<Cell[][]> cells) {
         Cell[][] tmp_desk = cells.get(cells.size() - 3);
         Cell[][] now_desk = board.getReversiBoard();

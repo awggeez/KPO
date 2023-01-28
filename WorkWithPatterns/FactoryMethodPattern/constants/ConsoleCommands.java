@@ -1,6 +1,9 @@
 package constants;
 
-public final class ConsoleCommands {
+public class ConsoleCommands {
+    
+    private ConsoleCommands() {};
+
     public static final String SAMSUNG_COMPANY_NAME = "Samsung";
     public static final String APPLE_COMPANY_NAME = "Apple";
     public static final String DISPLAY_SAMSUNG = "Company - Samsung";

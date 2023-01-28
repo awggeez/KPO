@@ -1,6 +1,9 @@
 package constants;
 
-public final class ConsoleCommands {
+public class ConsoleCommands {
+    
+    private ConsoleCommands() {};
+    
     public static final String MERCEDES_PASSENGER_CAR_DRIVING = "You're driving a passenger Mercedes";
     public static final String BMW_PASSENGER_CAR_DRIVING = "You're driving a passenger BMW";
     public static final String MERCEDES_CROSSOVER_DRIVING = "You're driving a Mercedes crossover";

@@ -1,7 +1,7 @@
 package constants;
 
 public class ConsoleCommands {
-    
+
     private ConsoleCommands() {};
     
     public static final String MERCEDES_PASSENGER_CAR_DRIVING = "You're driving a passenger Mercedes";

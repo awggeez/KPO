@@ -1,7 +1,7 @@
 package constants;
 
 public class ConsoleCommands {
-    
+
     private ConsoleCommands() {};
 
     public static final String SAMSUNG_COMPANY_NAME = "Samsung";

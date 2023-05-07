@@ -10,7 +10,7 @@
 );
 
 INSERT INTO employees (name, surname, department, salary)
-VALUES ('Marik', 'Abiev', 'IT', 1000),
+VALUES ('Luis', 'Adam', 'IT', 1000),
        ('Taylor', 'Smith', 'IT', 700),
        ('Anton', 'Smirnov', 'HR', 850);
        
